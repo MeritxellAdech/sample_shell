@@ -74,3 +74,4 @@ char *_get_fullpath(char *path, char *command)
 {
 	return (_pathbuilder(3, path, "/", command));
 }
+
