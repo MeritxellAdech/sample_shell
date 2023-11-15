@@ -58,6 +58,7 @@ int _exec(char **commands, int commands_executed
 int _check_mode(void);
 void handle_sigint(int signum);
 void _isexit(char **commands, char *buffer, char **envpath
+, int signal_value, char **env_clone);
 int _isexec(char *path);
 int _exitshell(char **envpath, char **env_clone, char *buffer);
 
@@ -91,7 +92,6 @@ void free_list(node_t *head);
 
 int _checkenv(char *command);
 void _printenv(void);
-, int signal_value, char **env_clone);
 int _set_env(const char *name, const char *value, int overwrite);
 char **_get_envs(char **env);
 void _relpath(int *file_info, char **envpath, char **commands
